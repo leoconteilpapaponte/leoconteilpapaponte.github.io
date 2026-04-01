@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Truth or Fake&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #f3f4f6, #e5e7eb);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 850px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 24px 0 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: fadeIn 0.8s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#logo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 150px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 60%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #111827;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: fadeIn 0.5s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>ul {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.7;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.highlight {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #eff6ff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 4px solid #3b82f6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 16px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #1e3a8a;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#progress-container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(90deg, #10b981, #34d399);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: width 0.35s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.top-info {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#question-number,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#timer,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#score {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#timer.warning {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fef3c7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #92400e;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#timer.danger {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fee2e2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #991b1b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#question {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 18px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 90px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.buttons {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.15s ease, opacity 0.2s ease, box-shadow 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-1px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.95;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transform: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-start {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #2563eb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.true {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #16a34a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width: 140px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.false {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #dc2626;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width: 140px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#feedback {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.correct {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #dcfce7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #166534;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #86efac;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrong {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fee2e2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #991b1b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #fca5a5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.timesup {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fef3c7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #92400e;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #fcd34d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#final {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#final-score {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #111827;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 12px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#final-message {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-note {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #6b7280;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>from {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transform: translateY(6px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>to {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transform: translateY(0);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.7rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>#logo {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 130px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>#question {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>min-height: 110px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.buttons {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.true,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.false,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.btn-start {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.top-info {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>align-items: stretch;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>#question-number,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>#timer,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>#score {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="logo.png" alt="Truth or Fake Logo" id="logo" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Truth or Fake&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="subtitle"&gt;Learn how to recognize fake news and test your skills.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="intro" class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;How to Distinguish Fake News from Real News&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Fake news often looks convincing, but there are some important signs that can help you understand whether a piece of news is trustworthy or not.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;strong&gt;Check the source:&lt;/strong&gt; reliable news usually comes from recognized newspapers, institutions, or official organizations.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;strong&gt;Look for the author:&lt;/strong&gt; a real article often has a clear author and verifiable credentials.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;strong&gt;Check the date:&lt;/strong&gt; old news may be shared again to create confusion.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;strong&gt;Read beyond the headline:&lt;/strong&gt; fake news often uses shocking titles to attract attention.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;strong&gt;Look for evidence:&lt;/strong&gt; real news contains data, quotes, or references to trustworthy sources.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;strong&gt;Compare with other sources:&lt;/strong&gt; if the news is real, other reliable websites usually report it too.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;strong&gt;Watch for emotional language:&lt;/strong&gt; fake news often tries to make readers angry, scared, or shocked.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="highlight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>In this quiz, you will read 10 news statements. Decide whether each one is &lt;strong&gt;true&lt;/strong&gt; or &lt;strong&gt;false&lt;/strong&gt;. <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>You gain &lt;strong&gt;3 points&lt;/strong&gt; for each correct answer.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="btn-start" onclick="startQuiz()"&gt;Start Quiz&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="quiz" class="card" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="progress-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="progress-bar"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="top-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="question-number"&gt;Question 1 / 10&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="timer"&gt;Time: 10&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="score"&gt;Score: 0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="question"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="buttons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="trueBtn" class="true" onclick="answer(true)"&gt;True&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="falseBtn" class="false" onclick="answer(false)"&gt;False&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="feedback"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="final" class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Quiz Finished&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="final-score"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="final-message"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-note"&gt;Created for a fake news awareness project.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const questions = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "Scientists confirm that drinking 2 liters of water per day boosts intelligence by 30%.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: false,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is false because it makes an exaggerated and very precise claim without citing any scientific source. Drinking water is healthy, but there is no evidence that it increases intelligence by 30%."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "NASA successfully crashed a spacecraft into an asteroid to test planetary defense.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: true,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is true. NASA carried out the DART mission to test whether a spacecraft could change the path of an asteroid."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "A man survived for 3 months eating only pizza and lost 20 kilograms.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: false,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is false because it sounds sensational and unrealistic, and there is no credible evidence or medical source supporting the claim."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "The European Union approved a law requiring USB-C chargers for most electronic devices.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: true,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is true. The EU approved rules introducing USB-C as a common charging standard for many devices."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "Sharks are evolving to walk on land because of climate change.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: false,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is false. Some species can move in unusual ways, but the statement exaggerates the science and turns it into clickbait."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "Artificial intelligence has passed a university-level law exam.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: true,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is true. Some AI systems have performed at or above the level required in law-related exams and tests."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "Eating chocolate every day doubles human lifespan, researchers say.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: false,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is false because it uses an extreme health claim with no believable evidence. Real scientific studies do not make conclusions like this."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "Japan built a hotel staffed almost entirely by robots.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: true,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is true. Japan created the Henn-na Hotel, known for using robots in many service roles."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "Aliens contacted Earth governments in 2024, according to leaked documents.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: false,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is false. It is a vague conspiracy-style statement with no trustworthy proof and no official verification."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>q: "Climate change is increasing the frequency and intensity of many extreme weather events.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>a: true,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reason: "This is true. Scientific research widely supports the link between climate change and many forms of extreme weather."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let current = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let score = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let timeLeft = 10;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let timer = null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let answered = false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const intro = document.getElementById("intro");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const quiz = document.getElementById("quiz");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const finalScreen = document.getElementById("final");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const questionEl = document.getElementById("question");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const questionNumberEl = document.getElementById("question-number");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const timerEl = document.getElementById("timer");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const scoreEl = document.getElementById("score");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const progressBar = document.getElementById("progress-bar");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const feedbackEl = document.getElementById("feedback");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const trueBtn = document.getElementById("trueBtn");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const falseBtn = document.getElementById("falseBtn");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const finalScoreEl = document.getElementById("final-score");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const finalMessageEl = document.getElementById("final-message");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function startQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>intro.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>quiz.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>current = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>score = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>answered = false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>enableButtons();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const item = questions[current];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>questionEl.textContent = item.q;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>questionNumberEl.textContent = `Question ${current + 1} / ${questions.length}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>scoreEl.textContent = `Score: ${score}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.className = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.textContent = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateProgressBar();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>timeLeft = 10;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>timerEl.textContent = `Time: ${timeLeft}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>timerEl.classList.remove("warning", "danger");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>clearInterval(timer);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>timer = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>timeLeft--;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>timerEl.textContent = `Time: ${timeLeft}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (timeLeft &lt;= 5 &amp;&amp; timeLeft &gt; 2) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>timerEl.classList.add("warning");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>timerEl.classList.remove("danger");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (timeLeft &lt;= 2) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>timerEl.classList.add("danger");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>timerEl.classList.remove("warning");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (timeLeft === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>clearInterval(timer);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>timeUp();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateProgressBar() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const progress = (current / questions.length) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>progressBar.style.width = `${progress}%`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function disableButtons() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>trueBtn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>falseBtn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function enableButtons() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>trueBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>falseBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function answer(userAnswer) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (answered) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>answered = true;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>clearInterval(timer);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>disableButtons();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const item = questions[current];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (userAnswer === item.a) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>score += 3;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.className = "correct";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.innerHTML = `&lt;strong&gt;Correct.&lt;/strong&gt; ${item.reason}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.className = "wrong";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>feedbackEl.innerHTML = `&lt;strong&gt;Wrong.&lt;/strong&gt; ${item.reason}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>scoreEl.textContent = `Score: ${score}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(nextQuestion, 2600);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function timeUp() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (answered) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>answered = true;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>disableButtons();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const item = questions[current];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.className = "timesup";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>feedbackEl.innerHTML = `&lt;strong&gt;Time's up.&lt;/strong&gt; ${item.reason}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(nextQuestion, 2600);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function nextQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>current++;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (current &lt; questions.length) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>endQuiz();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function endQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>clearInterval(timer);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>quiz.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>finalScreen.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>progressBar.style.width = "100%";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const maxScore = questions.length * 3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>finalScoreEl.textContent = `${score} / ${maxScore}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>let message = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (score &gt;= 27) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>message = "Excellent. You are very good at recognizing the signs of fake news and checking whether information is reliable.";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (score &gt;= 18) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>message = "Good job. You already know many useful strategies, but you should still pay close attention to sources, evidence, and sensational headlines.";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (score &gt;= 9) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>message = "Not bad, but there is room for improvement. Remember to check the source, the author, the date, and whether other reliable outlets report the same story.";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>message = "Be careful. Fake news can be very convincing. Try to slow down, verify information, and never trust a headline immediately.";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>finalMessageEl.textContent = message;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
